@@ -4,7 +4,7 @@ class Owner
   
   def initialize(species)
     binding.pry
-  
+    
   end 
  
   def self.all
