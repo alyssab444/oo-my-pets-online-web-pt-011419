@@ -6,6 +6,9 @@ class Owner
   
   def initialize(species)
     
+    @dir = hash[:dir]
+    @prog_path = hash[:prog_path]
+  end
     @species= species
     @name = name
     #binding.pry
