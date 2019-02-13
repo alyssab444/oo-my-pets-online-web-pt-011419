@@ -5,7 +5,7 @@ class Owner
   @@all= []
   
   def initialize(species)
-   
+    @@pets = {:fishes => [], :dogs => [], :cats => []}
     @species= species
     @name = name
     #binding.pry
