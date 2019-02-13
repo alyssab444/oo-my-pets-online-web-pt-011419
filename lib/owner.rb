@@ -3,6 +3,7 @@ class Owner
   @@all= []
   
   def initialize(species)
+    @species= species 
     #binding.pry
     @@all << self
   end 
@@ -18,4 +19,6 @@ class Owner
   def self.reset_all
     @@all.clear 
   end 
+  
+ 
 end
