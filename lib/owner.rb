@@ -1,5 +1,10 @@
 class Owner
-  def self.all 
+  def initialize(species)
+    
+  
+  end 
+ 
+  def self.all
     
   end 
 end
