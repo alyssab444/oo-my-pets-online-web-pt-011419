@@ -1,9 +1,12 @@
+require 'pry'
 class Owner
+  @@all= []
+  
   def initialize(species)
     
   
   end 
-  @@all= []
+ 
   def self.all
     @@all 
     
