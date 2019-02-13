@@ -1,14 +1,11 @@
 require 'pry'
 class Owner
   attr_reader :species, :name 
-  attr_accessor :name, :pets 
+  attr_accessor :name, :pets, :fish, :dog, :cat 
   @@all= []
   
   def initialize(species)
-    @pets= 
-    @dir = hash[:dir]
-    @prog_path = hash[:prog_path]
-  end
+   
     @species= species
     @name = name
     #binding.pry
