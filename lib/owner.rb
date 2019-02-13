@@ -5,7 +5,7 @@ class Owner
   @@all= []
   
   def initialize(species)
-    
+    @pets= 
     @dir = hash[:dir]
     @prog_path = hash[:prog_path]
   end
