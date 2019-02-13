@@ -27,12 +27,17 @@ class Owner
   def say_species
     return "I am a human."
   end 
+  
   def pets 
     @@pets 
   end 
+  
   def buy_fish(fish) 
      @@pets[:fishes] << Fish.new(fish)
-    
+  end 
+  
+  def buy_cat 
+    @@pets[:cat] << Cat.new(cat)
   end 
  
 end
