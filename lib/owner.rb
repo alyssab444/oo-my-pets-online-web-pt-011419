@@ -1,10 +1,76 @@
+require 'pry'
 class Owner
-  def initialize(species)
-    
+  attr_reader :species, :name 
+  attr_accessor :name, :pets, :fish, :dog, :cat 
+  @@all= []
   
+  def initialize(species)
+    @@pets = {:fishes => [], :dogs => [], :cats => []}
+    @species= species
+    @name = name
+    #binding.pry
+    @@all << self
   end 
  
-  def self.all
-    
+  def self.all 
+    @@all 
   end 
-end
+  
+  def self.count
+    @@all.length 
+  end 
+  
+  def self.reset_all
+    @@all.clear 
+  end 
+  
+  def say_species
+    return "I am a human."
+  end 
+  
+  def pets 
+    @@pets 
+  end 
+  
+  def buy_fish(fish) 
+     @@pets[:fishes] << Fish.new(fish)
+  end 
+  
+  def buy_cat(cat)
+    @@pets[:cats] << Cat.new(cat)
+  end 
+ 
+  def buy_dog(dog)
+   @@pets[:dogs] << Dog.new(dog)
+  end
+
+  def walk_dogs 
+    @@pets[:dogs].each do |dog|
+      dog.mood = 'happy'
+    end 
+  end 
+  
+  def play_with_cats 
+    @@pets[:cats].each do |cat|
+      cat.mood = "happy"
+    end 
+  end 
+  
+  def feed_fish 
+    @@pets[:fishes].each do |fish|
+      fish.mood = "happy"
+    end 
+  end 
+  
+  def sell_pets
+    @pets.each do |type, pet|
+      pet.each{|p| p.mood = "nervous"}
+      pet.clear
+    end
+  end
+ def list_pets
+    "I have #{pets[:fishes].length} fish, #{pets[:dogs].length} dog(s), and #{pets[:cats].length} cat(s)."
+  end
+    
+
+end 
