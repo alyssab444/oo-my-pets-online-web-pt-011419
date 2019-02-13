@@ -5,6 +5,7 @@ class Owner
   @@all= []
   
   def initialize(species)
+    
     @species= species
     @name = name
     #binding.pry
