@@ -3,7 +3,7 @@ class Owner
   @@all= []
   
   def initialize(species)
-    
+    binding.pry
   
   end 
  
